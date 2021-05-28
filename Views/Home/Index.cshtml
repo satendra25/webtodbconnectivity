@@ -1,0 +1,26 @@
+﻿@model IEnumerable<sampledbconnectivity.Models.Emplyee>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>List of Employee</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.EmployeeId)</th>
+                <th>@Html.DisplayNameFor(m => m.Name)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in Model)
+            {
+            <tr>
+                <td>@emp.EmployeeId.ToString()</td>
+                <td>@emp.Name</td>
+            </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
